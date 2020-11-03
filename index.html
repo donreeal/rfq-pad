@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfq-pad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Spartan:wght@400;500&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/typography.css">
+    <link rel="stylesheet" href="/css/data-grid.css">
+</head>
+
+<body>
+    <div id="root">
+        <h1>rfq-pad</h1>
+        <div class="pad">
+            <header class="pad-header">
+                <h1 style="grid-row: 1; grid-column: 1/4">Anfrage</h1>
+                <h2 class="branding">Acme Inc</h2>
+            </header>
+            <section class="pad-body line-items-grid">
+                <div class="new-item-line display-contents">
+                    <fieldset class="display-contents">
+                        <div class="line-item-control">
+                            <span class="line-item-number">🖉</span>
+                        </div>
+                        <div class="line-item-control">
+                            <input type="number" name="stueck" autocomplete="off" value="1" />
+                        </div>
+                        <div class="line-item-control">
+                            <div class="combobox-annotation">Dunkelroter Schlitzahorn</div>
+                            <input type="text" spellcheck="false" name="plant" autocomplete="off" value="Acer palmatum 'Dissectum Garnet'" />
+                            <input type="text" spellcheck="false" name="quality" autocomplete="off" value="Co 20L 150-175" />
+                        </div>
+
+                        <div class="line-item-control">
+                            <input type="number" name="unit-price" id="" value="390">
+                        </div>
+                        <div class="line-item-control">
+                            <input type="number" name="subtotal" id="" value="3900">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="item-line disabled display-contents">
+                    <fieldset class="display-contents" disabled>
+                        <div class="line-item-control">
+                            <span class="line-item-number">1</span>
+                        </div>
+                        <div class="line-item-control">
+                            <input type="number" name="stueck" autocomplete="off" value="1" />
+                        </div>
+                        <div class="line-item-control">
+                            <div class="combobox-annotation">Kirschlorbeer 'Etna'</div>
+                            <input type="text" spellcheck="false" name="plant" autocomplete="off" value="Prunus laurocerasus 'Etna'" />
+                            <input type="text" spellcheck="false" name="quality" autocomplete="off" value="Sol Co 20L 150-175" />
+                        </div>
+                        <div class="line-item-control">
+                            <input type="number" name="unit-price" id="" value="69">
+                        </div>
+                        <div class="line-item-control">
+                            <input type="number" name="subtotal" id="" value="69">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="item-line disabled display-contents">
+                    <fieldset class="display-contents" disabled>
+                        <div class="line-item-control">
+                            <span class="line-item-number">🖉</span>
+                        </div>
+                        <div class="line-item-control total-label">
+                            <label for="" class="line-item-number">Gesamt</label>
+                        </div>
+                        <div class="line-item-control total">
+                            <input type="number" name="total" id="" value="3969">
+                        </div>
+                    </fieldset>
+                </div>
+            </section>
+            <footer class="pad-footer">
+                <h3 class="branding">footer</h3>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
