@@ -35,7 +35,7 @@ body {
     /* 6*17*12 [px-min, raster] */
     max-width: 1224px;
     background-color: hsl(91, 25%, 34%);
-    background-image: url("../img/rice-paper-3.png");
+    background-image: url("./rice-paper-3.png");
 }
 
 .pad {
