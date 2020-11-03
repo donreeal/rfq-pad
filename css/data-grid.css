@@ -1,0 +1,131 @@
+/* https://adamlynch.com/flexible-data-tables-with-css-grid/#just-get-to-css-grid-already */
+
+
+/* resetting fieldset seems not req wont render ever
+fieldset {
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+}
+*/
+
+h1,
+h2,
+h3,
+h4,
+span,
+label {
+    padding: 0px 12px;
+}
+
+input {
+    outline-style: unset;
+    border-style: unset;
+    font-weight: 600;
+    background: none;
+    font-stretch: narrower;
+}
+
+body {
+    color: white;
+    margin: 0 auto;
+    display: block;
+    /* 6*15*12 [px-min, raster, grid-raster] */
+    min-width: 1080px;
+    /* 6*17*12 [px-min, raster] */
+    max-width: 1224px;
+    background-color: hsl(91, 25%, 34%);
+    background-image: url("../rice-paper-3.png");
+}
+
+.pad {
+    color: black;
+    /* background: rgba(255, 255, 255, 0.781); */
+    /* background: linen; */
+    display: grid;
+    grid-template-rows: 200px auto 123px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.pad-header {
+    color: white;
+    background: #367000;
+    display: grid;
+    max-width: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* repeating layout of pad */
+    grid-template-columns: minmax(45px, 0.5fr) minmax(90px, 1fr) minmax(495px, 5.5fr) minmax(90px, 1fr) minmax(90px, 1fr);
+    grid-gap: 4px 4px;
+}
+
+.branding {
+    font-size: 0.43em;
+    grid-column: 3 / 7;
+    grid-row: 1 / 2;
+    text-align: right;
+    margin: 10px;
+}
+
+.pad-body {
+    color: black;
+    /* background: white; */
+}
+
+.pad-footer {
+    color: white;
+    background: #367000;
+}
+
+.display-contents {
+    display: contents;
+}
+
+.line-items-grid {
+    display: grid;
+    grid-template-columns: minmax(45px, 0.5fr) minmax(90px, 1fr) minmax(495px, 5.5fr) minmax(90px, 1fr) minmax(90px, 1fr);
+    grid-gap: 4px 4px;
+    grid-auto-rows: 1fr;
+    background: rgba(0, 0, 0, 0.11);
+}
+
+.line-item-control {
+    /* consider naming it table cell?*/
+    background: linen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border-bottom: solid 0.15em rgb(126, 126, 126); */
+}
+
+.line-item-control:focus-within {
+    background: #f88a40;
+    /* border-bottom-color: black; */
+}
+
+.item-line.disabled .line-item-control {
+    background: rgba(255, 255, 255, 0.616);
+}
+
+.line-item-number {
+    color: rgb(85, 85, 85);
+}
+
+.combobox-annotation {
+    font-family: inherit;
+    font-size: 0.66em;
+    font-weight: 400;
+    color: rgb(85, 85, 85);
+}
+
+input[type=number] {
+    text-align: right;
+}
+
+.total-label {
+    grid-column: 2/5;
+    text-align: right;
+}
+
+.total {
+    grid-column: 5/6;
+}
